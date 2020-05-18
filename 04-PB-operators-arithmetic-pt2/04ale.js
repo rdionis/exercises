@@ -30,8 +30,8 @@ console.log(mean);
 //5.85
 let sixthTest = 85 * 6;
 console.log(sixthTest);
-console.log(sixthTest -70 -75 -80 -90 -100);
-//95
+console.log(sixthTest - 75 - 70 - 80 - 90 - 100);
+//90
 let min = (9*80) - (8*78);
 console.log(min);
 //96% min
