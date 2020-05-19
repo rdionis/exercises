@@ -1,10 +1,12 @@
 console.log('question 1');
-let isDog = 'dog';
-(isDog=='dog') ? console.log('pat, pat') : console.log('find me dog to pat!');
+let isDog = 'true';
+isDog ? console.log('pat, pat') : console.log('find me dog to pat!');
 //true pat pat
+//alt way: let answer= isDog ? ("pat,pat") : ("find me a dog to pat");
 console.log('question 2');
-let speedCheck = 85;
-(speedCheck => 50) ? console.log('youre going too fast!') : console.log('youre driving below speed limit, oma!');
+let speedCheck = 35;
+let speedLimit= 50;
+speedCheck = 50 ? console.log('youre going too fast!') : console.log('youre driving below speed limit, oma!');
 //true you're going too fast
 console.log('question 3');
 let age = 53;
