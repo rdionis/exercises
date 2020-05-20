@@ -14,7 +14,7 @@ let d =  -9.78;
 let e = 43.342;
 let f = 28.329;
 
-//b. 
+//a. 
 console.log(Math.ceil(a));
 console.log(Math.ceil(b));
 console.log(Math.ceil(c));
@@ -30,7 +30,7 @@ console.log(Math.floor(f));
 
 //Q3.
 let random1 = Math.random();
-random1 = random1*10;
+random1 = random1*6;
 console.log(random1);
 let random2 = Math.ceil(random1);
 console.log(random2);
