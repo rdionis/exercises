@@ -1,10 +1,12 @@
+"use strict";
+
 let x=20;
 let y=30;
 console.log('Question 1');
-console.log(x==y);
+console.log(x===y);
 //false
 console.log('Question 2');
-console.log(x!=y);
+console.log(x!==y);
 //true
 console.log('Question 3');
 console.log(x>y);
