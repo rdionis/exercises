@@ -1,3 +1,4 @@
+"use strict";
 console.log('question 1');
 let isDog = 'true';
 isDog ? console.log('pat, pat') : console.log('find me dog to pat!');
