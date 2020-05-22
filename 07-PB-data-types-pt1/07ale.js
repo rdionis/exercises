@@ -1,3 +1,4 @@
+"use strict";
 console.log('question 1');
 let myString = 'i cant stop thinking about gn';
 console.log(myString);
