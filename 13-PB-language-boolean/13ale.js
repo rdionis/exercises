@@ -4,10 +4,10 @@
 console.log("Question 1");
 // Q1
 
-console.log(3 === "3" ? true : false); 
-// true, content is equal
+console.log(3 == "3" ? true : false); 
+// false
 // it means there are difference
-// ===  compares value AND type
+// === compares value AND type
 
 console.log(3 == "3" ? true : false); 
 // true, automatically String always wins
@@ -21,7 +21,7 @@ console.log(!z? true : false);
 // expected output:false
 
 
-//3
+// Q3.
 let firstName, givenName;
 
 firstName = 'Stacey';
