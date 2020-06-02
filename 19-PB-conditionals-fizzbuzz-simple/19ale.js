@@ -11,9 +11,9 @@ if (randomNum % 3 === 0) {
     console.log("Fizz")
 } else if (randomNum % 5 === 0) {
     console.log("Buzz")
-} else if ((randomNum % 3 === 0) && (anyGivenNum % 5 === 0)) {
+} else if ((randomNum % 3 === 0) && (randomNum % 5 === 0)) {
     console.log("FizzBuzz")
 } 
 else {
-    console.log("TRY AGAIN");
+    console.log(randomNum);
 }
