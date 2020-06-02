@@ -25,7 +25,7 @@ switch (color) {
         console.log("yellow");
         break;
     default:
-        console.log("try again")
+        console.log("try again");
 }
 
 console.log("Q2");
@@ -34,22 +34,22 @@ let grade = 1; // give in your grade
 
 switch (grade) {
     case 1:
-        console.log("excellent!")
+        console.log("excellent!");
         break;
     case 2:
-        console.log("great!")
+        console.log("great!");
         break;
     case 3:
-        console.log("passed")
+        console.log("passed");
         break;
     case 4:
-        console.log("need to study")
+        console.log("need to study");
         break;
     case 5:
-        console.log("failed")
+        console.log("failed");
         break;
     default:
-        console.log("no grade")
+        console.log("no grade");
 }
 
 console.log("Q3");
@@ -74,14 +74,14 @@ console.log("Q4");
 
 let percentageComplete = null; // type in your percentage
 if (percentageComplete < 30) {
-    console.log("still a long way to go.")
+    console.log("still a long way to go.");
 } else if (30 >= percentageComplete <= 50) {
-    console.log("slowly getting there")
+    console.log("slowly getting there");
 } else if (51 >= percentageComplete <= 81) {
-    console.log("you can do it")
+    console.log("you can do it");
 } else if (81 >= percentageComplete <= 99) {
-    console.log("you can do it")
-} else if (percentageComplete = 100) {
+    console.log("you can do it");
+} else if (percentageComplete === 100) {
     console.log("Youre there. Well done!")
 }
 
