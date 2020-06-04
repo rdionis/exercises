@@ -38,12 +38,12 @@
 //     }
 //     console.log(myString);
 // }
-
+"use strict";
 
 for (let i = 10; i >= 1; i--) {
     let myString = "";
     for (let j = i; j < 10; j++) {
-        myString += 'j';
+        myString += ' ';
     }
     for (let k = 0; k < i * 2 - 1; k++) {
         myString += '*';
