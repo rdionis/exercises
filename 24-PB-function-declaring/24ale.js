@@ -31,12 +31,12 @@ function remaindeR(a, b) {
 }
 remaindeR(4, 3);
 
-const remaindeR2 = function (a = 8, b = 5) {
+const remaindeR2 = function (a, b) {
     console.log(a % b);
 }
-remaindeR2();
+remaindeR2(5, 8);
 
-const remaindeR3 = (a = 5, b = 3) => {
+const remaindeR3 = (a, b) => {
     console.log(a % b);
 }
-remaindeR3();
+remaindeR3(5,3);
