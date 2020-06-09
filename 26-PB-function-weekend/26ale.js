@@ -9,7 +9,7 @@ const isItWeekend = (date) => {
         console.log("sadly not.")
     }
 }
-const givenDate = new Date("2020-06-03")
+const givenDate = new Date("2020-06-07")
 const weekendDay = givenDate.getDay();
 
 isItWeekend(givenDate);
