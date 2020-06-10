@@ -4,9 +4,10 @@
 console.log("Q1");
 const addUp = (number) => {
     let sum = null;
-  for (let i = 1; i <= number; i++) { // hint: declare the i in the loop!
+    for (let i = 1; i <= number; i++) { // hint: declare the i in the loop!
         sum += i;
-  } return sum;
+    }
+    return sum;
 }
 console.log(addUp(4));
 console.log(addUp(13));
@@ -14,10 +15,10 @@ console.log(addUp(600));
 
 // Q2.
 console.log("Q2");
-const sumOfCubes = (a=0, b=0, c=0)=>{
-    return a*a*a + b*b*b + c*c*c;
-} 
-console.log(sumOfCubes(1,5,9));
+const sumOfCubes = (a = 0, b = 0, c = 0) => {
+    return a * a * a + b * b * b + c * c * c;
+}
+console.log(sumOfCubes(1, 5, 9));
 console.log(sumOfCubes(2));
 console.log(sumOfCubes());
 
@@ -108,7 +109,7 @@ const wheresWaldo = (waldoString) => {
     } else {
         return false;
     }
-    
+
 }
 
 console.log(wheresWaldo("is there wal here ?"));
@@ -120,7 +121,7 @@ console.log(wheresWaldo("waldo is here"));
 // Q10. 
 console.log("Q10");
 const equalSlice = (a, b, c) => {
-    if (b*c < a) {
+    if (b * c < a) {
         return true;
     } else {
         return false;
@@ -140,7 +141,7 @@ const xoXo = (string11) => {
     for (let position = 0; position < string11.length; position++) {
         if (string11.charAt(position) === "x") {
             checkForX++
-        }else if (string11.charAt(position) === "o") {
+        } else if (string11.charAt(position) === "o") {
             checkForO++
         }
     }
@@ -160,11 +161,11 @@ console.log(xoXo("zzoo"));
 // Q12.
 console.log("Q12");
 const isPrime = (primeNum) => {
-   if (primeNum/primeNum === 1 && primeNum / 1 === primeNum) {
-       return true;
-   } else {
-       return false;
-   }
+    if (primeNum / primeNum === 1 && primeNum / 1 === primeNum) {
+        return true;
+    } else {
+        return false;
+    }
 }
 console.log(isPrime(7));
 console.log(isPrime(9));
