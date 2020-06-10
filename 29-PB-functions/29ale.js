@@ -35,16 +35,21 @@ const equalZero = (num) => {
 const answer5 = equalZero(3); // i tried with the examples given and it works
 console.log(answer5);
 
+// shorter way of writing it
+// const lessThanOrEqualToZero = x => x <= 0;
+
 // Q5. 
 console.log("Q5");
 let a = "this is a string";
 
 const countOccurrences = (string, letter) => {
+    let letterCounter = 0;
     for (let i = 0; i < a.length; i++) {
-        if (string.equals(a[i]))
-           
+        if (string.charAt(i) === letter) {
+            letterCounter++;
+        }
     }
-    
+    return letterCounter;
 }
 console.log(countOccurrences("this is a string", "i"));
 
