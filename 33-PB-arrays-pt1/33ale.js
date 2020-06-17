@@ -2,6 +2,7 @@
 
 // Q1.
 const euroCities = ["Paris", "London", "Valletta", "Prague", "Rome"];
+console.log(euroCities);
 const secondItem = euroCities[1];
 console.log(secondItem);
 
