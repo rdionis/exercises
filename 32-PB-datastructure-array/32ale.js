@@ -3,8 +3,8 @@
 const myArray = ["hello", 333, false, "ale", 321];
 console.log(myArray);
 
-myArray[2] = "thirdElement";
-console.log(myArray[2]);
+const thirdElement = myArray[2];
+console.log(thirdElement);
 
-myArray[3] = "fourth element"
-console.log(myArray); 
+myArray[3] = "fourth element";
+console.log(myArray);
