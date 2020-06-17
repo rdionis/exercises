@@ -22,7 +22,8 @@ euroCities.push("Budapest");
 console.log(euroCities);
 
 // Q6.
-
+euroCities.splice(1, 2);
+console.log(euroCities);
 
 // Q7.
 const asianCities = ["Tokyo", "Kuala Lumpur", "Vietnam", "Kabul", "Tashkent"];
