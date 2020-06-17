@@ -31,7 +31,7 @@ const asianCities = ["Tokyo", "Kuala Lumpur", "Vietnam", "Kabul", "Tashkent"];
 console.log(asianCities);
 
 // Q8.
-const bonus8 = asianCities.slice(1,4);
+const bonus8 = asianCities.slice(1,4); //just fyi i interpret 2-4, so select 3 elements.
 console.log(bonus8);
 
 // Q9.
@@ -58,4 +58,13 @@ console.log(worldCities.toString());
 const myString = "hello world!";
 const newString = ["hello", "world"];
 newString.reverse();
-console.log(newString);
+console.log(newString.toString());
+
+// fixed bonus
+function reversePro(str) {
+    const reverseString = str.split('');
+    console.log(reverseString);
+    reverseString.reverse();
+    return reverseString.join('');
+}
+console.log(reversePro("hello world"));
