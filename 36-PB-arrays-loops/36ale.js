@@ -20,7 +20,7 @@ console.log("question 2");
 
 const names = ["don", "stella", "ro", "jess"];
 for (let i = 0; i < names.length; i++) {
-    console.log("hello", names[i]);
+    console.log([i], "hello", names[i] + "!");
 }
 
 
@@ -33,40 +33,56 @@ for (let i = 0; i < cities.length; i++) {
 }
 
 // Q4.
+console.log("question 4");
+
 function oddsEven(array) {
-    let even = 0;
-    let odd = 0;
+    let newArray = [];
     for (let i = 0; i < array.length; i++) {
-        if (i % 2 === 0) {
-            even - 1; // supposed to take each even num and subtract one. i've tried all ways. doesnt work
+        if (array[i] % 2 === 0) {
+            newArray.push(array[i] - 1); // supposed to take each even num and subtract one. i've tried all ways. doesnt work
         } else {
-            odd + 1; // same problem here
+            newArray.push(array[i] + 1); // same problem here
         }
     }
-    return even, odd;
+    return newArray;
 }
 
-console.log(oddsEven([3,5,2,4]));
-console.log(oddsEven([6,9,10,20]));
+console.log(oddsEven([3, 5, 2, 4]));
+console.log(oddsEven([6, 9, 10, 20]));
 
 // Q5.
+console.log("question 5");
+
 function capitalize(array) {
-    let newArray = array;
-    for (let i = 1; i< array.length; i++) {
-        newArray= array[i].charAt(0).toUpperCase();
+    let newArray = [];
+    for (let i = 1; i < array.length; i++) {
+        newArray = array[i].charAt(0).toUpperCase();
     }
     return newArray;
 }
 console.log(capitalize(["matt", "sara", "lara"]));
 
 
+// Q6
+console.log("question 6");
+
+function noDuplicates(array) {
+    let newArray = [];
+    for (let i = 0; i < array.length; i++) {
+        if (newArray.indexOf(array[i]) === -1) {
+            newArray.push(array[i]);
+        }
+    }
+    return newArray;
+}
+
+
+console.log(noDuplicates([1, 4, 4, 7, 7, 7]));
+console.log(noDuplicates([1, 6, 6, 9, 9]));
+console.log(noDuplicates([2, 2, 2, 2, 2, 2]));
+console.log(noDuplicates([5, 10, 15, 20, 25]));
 
 
 
 
 
-
-console.log("question 1");
-
-
-console.log("question 1");
