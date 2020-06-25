@@ -15,6 +15,7 @@ const person = {
 for (const myKey in person) {
     console.log(myKey);
     console.log(person[myKey]);
+    console.log(`${myKey} : ${person[myKey]}`); // this is the nice way!
 }
 
 // Q2
@@ -26,9 +27,8 @@ for (const myKey in person) {
 // const getObjectValues = Object.values(drinks);
 // console.log(getObjectValues);
 
-function getObjectValues(object) {
-    return Object.values(object);
-}
+const getObjectValues = (object) => Object.values(object);
+
 
 console.log(getObjectValues({
     choice1: "tea",
@@ -56,13 +56,26 @@ function objectToArray(object) {
     console.log(Object.entries(object));
 }
 
+// another way is: with nested arrays
+
+function convertToArray(object) {
+    const outsideArray = [];
+    for (const key in object) {
+        let insideArray = [];
+        insideArray.push(key);
+        insideArray.push(object[key]);
+        outsideArray.push(insideArray);
+    }
+    return outsideArray;
+}
+
 console.log(objectToArray({
     A: 1,
     B: 2,
     C: 3
 }));
 
-console.log(objectToArray({
+console.log(convertToArray({
     cats: 1,
     dogs: 2,
     turtles: 4
@@ -86,10 +99,10 @@ console.log(listFunction(student));
 // 3.
 let first = {
     firstName: "John"
-}
+};
 let last = {
     lastName: "Smith"
-}
+};
 
 function merge(object1, object2) {
     const mergedObject = {
