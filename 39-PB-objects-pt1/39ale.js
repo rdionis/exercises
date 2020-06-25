@@ -34,7 +34,7 @@ console.log(getObjectValues({
     choice1: "tea",
     choice2: "coffee",
     choice3: "milk"
-  }));
+}));
 
 // Q3
 const pet = {
@@ -48,3 +48,70 @@ const pet = {
     }
 };
 console.log("Q3", pet.method());
+
+// BONUSES
+
+// 1.
+function objectToArray(object) {
+    console.log(Object.entries(object));
+}
+
+console.log(objectToArray({
+    A: 1,
+    B: 2,
+    C: 3
+}));
+
+console.log(objectToArray({
+    cats: 1,
+    dogs: 2,
+    turtles: 4
+}));
+
+
+// 2.
+let student = {
+    name: "Mike",
+    class: "4A",
+    course: "English"
+};
+
+function listFunction(object) {
+    const newArray = Object.keys(object);
+    return newArray;
+}
+
+console.log(listFunction(student));
+
+// 3.
+let first = {
+    firstName: "John"
+}
+let last = {
+    lastName: "Smith"
+}
+
+function merge(object1, object2) {
+    const mergedObject = {
+        ...object1,
+        ...object2
+    };
+    console.log(mergedObject);
+}
+
+console.log(merge(first, last));
+
+// 4.
+let person2 = {
+    name: "John",
+    job: "teacher"
+};
+
+function getCopy(object) {
+    const newObject = {};
+    for (const key in object) {
+        newObject[object[key]] = key;
+    }
+    return newObject;
+}
+console.log(getCopy(person2));
