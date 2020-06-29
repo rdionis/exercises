@@ -2,19 +2,24 @@
 
 // Q1
 function checkNum(num, object) {
-    const minMax = Object.values(object);
-    console.log(minMax);
-    // if (num >= this.minMax && num <= this.minMax) {
-    //     return true;
-    // } else {
-    //     return false;
-    // }
-    // if (object[2] < num > object[0]) {
-    //     return true;
-    // } else {
-    //     return false;
-    // }
+    console.log(object.min);
+    console.log(object.max);
+    if (num >= object.min && num <= object.max) {
+        return true;
+    } else {
+        return false;
+    }
 }
+// const minMax = Object.values(object);
+// console.log(minMax);
+// if (num >= this.minMax && num <= this.minMax) {
+//    
+// if (object[2] < num > object[0]) {
+//     return true;
+// } else {
+//     return false;
+// }
+
 console.log("question 1");
 console.log(checkNum(4, {
     min: 0,
@@ -59,16 +64,22 @@ const scrabbleArray = [{
 
 function totalPoints(array) {
     let sum = 0;
-    for (let i = 0; i < array.length; i++) {
-        sum += array[i].score;
+    // for (let i = 0; i < array.length; i++) {
+    //     sum += array[i].score;
+    // }
+    for (const key of array) {
+        sum += key.score;
     }
     return sum;
 }
 console.log("question 2");
 console.log(totalPoints(scrabbleArray));
-// i have no idea why this works! just was typing in things to see if they worked. i need an explanation >.<
+
+// i have no idea why this works! i need an explanation >.<
 // (const key of array)
 // array[key].score;
+// ---> this is NOT A PROPER WAY OF WRITING
+// when you write for of you can remove the array
 
 
 // Q3
@@ -93,13 +104,14 @@ function countLetters(string) {
     for (let i = 0; i < string.length; i++) {
         let currentLetter = string.charAt(i);
         newObject[currentLetter] = newObject[currentLetter] + 1 || 1;
+        
     }
     return newObject;
 }
 console.log("question 4");
 console.log(countLetters("tree"));
 console.log(countLetters("rotem"));
-
+console.log(countLetters("alejandra"));
 
 // Q5
 function freeShipping(object) {
@@ -107,11 +119,7 @@ function freeShipping(object) {
     for (const key in object) {
         total += object[key];
     }
-    if (total > 50) {
-        return true;
-    } else {
-        return false;
-    }
+    return total > 50;
 
 }
 console.log("question 5");
