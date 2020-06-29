@@ -31,15 +31,36 @@ const findSmallest = (array) => {
 console.log(findLargest(array1));
 
 // Q5.
-const person = {name: "John"};
-const job = {role: "Teacher"};
+const person = {
+    name: "John"
+};
+const job = {
+    role: "Teacher"
+};
 
-const clonePerson = {...person};
+const clonePerson = {
+    ...person
+};
 console.log(clonePerson);
 
-const employee = {...person, ...job};
+const employee = {
+    ...person,
+    ...job
+};
 console.log(employee);
 
 employee.name = "alejandra";
 employee.role = "student";
 console.log(employee);
+
+// Q6
+const isWhole = (num1, num2, num3, num4) => {
+    let sum = num1 + num2 + num3 + num4;
+    if (sum % 4 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(isWhole(1, 2, 3, 4));
+console.log(isWhole(9, 2, 2, 5));
