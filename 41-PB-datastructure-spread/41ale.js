@@ -20,15 +20,16 @@ console.log(cloneArray);
 
 // Q3.
 const findLargest = (array) => {
-    return Math.max.apply(null, array);
+    return Math.max(array);
 }
 console.log(findLargest(array2));
 
 // Q4.
 const findSmallest = (array) => {
-    return Math.min.apply(...array);
+    return Math.min(...array);
 }
-console.log(findLargest(array1));
+console.log(findSmallest(array1));
+// note to self: when using spread operator with Math function, no need to .apply
 
 // Q5.
 const person = {
@@ -64,3 +65,6 @@ const isWhole = (num1, num2, num3, num4) => {
 }
 console.log(isWhole(1, 2, 3, 4));
 console.log(isWhole(9, 2, 2, 5));
+
+console.log(isWhole([9, 2, 2, 5]));
+// it seems to be working...maybe bc in an array each num = implicit key
