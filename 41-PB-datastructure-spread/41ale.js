@@ -4,7 +4,7 @@
 let euroCountries = ["Lithuania", "Poland", "Romania", "Albania"];
 let asianCountries = ["Vietnam", "North Korea", "China", "Indonesia"];
 
-euroCountries.push(asianCountries);
+euroCountries.push(...asianCountries);
 console.log(euroCountries);
 
 const array1 = [1, 2, 3, 4, 5];
@@ -20,7 +20,7 @@ console.log(cloneArray);
 
 // Q3.
 const findLargest = (array) => {
-    return Math.max(array);
+    return Math.max(...array);
 }
 console.log(findLargest(array2));
 
@@ -65,6 +65,7 @@ const isWhole = (num1, num2, num3, num4) => {
 }
 console.log(isWhole(1, 2, 3, 4));
 console.log(isWhole(9, 2, 2, 5));
+console.log(isWhole(1, 1, 1, 1));
 
-console.log(isWhole([9, 2, 2, 5]));
-// it seems to be working...maybe bc in an array each num = implicit key
+console.log(isWhole([1, 1, 1, 1]));
+// it doesnt work bc one array = one parameter and this function takes 4 parameters
