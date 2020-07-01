@@ -35,7 +35,7 @@ console.log(arrayOfNumbers.map(value => value + 1));
 
 
 // // Q3.
-const filterEvens = array => array.filter((num) => num % 2 === 0);
+const filterEvens = array => array.filter(value => value % 2 === 0);
 
 console.log(filterEvens[1, 2, 3, 11, 12, 13]);
 console.log(filterEvens[22, 2, 31, 110, 6, 13]);
