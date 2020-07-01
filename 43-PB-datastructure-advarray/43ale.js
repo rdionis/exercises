@@ -46,7 +46,7 @@ console.log(filterEvens[22, 2, 31, 110, 6, 13]);
 const friends = ["rika", "jenna", "bleda", "oliver", "itamar"];
 
 const filterItems = (array, query) => friends.filter(function (value) {
-    return value.toLowerCase().indexOf(query.toLowerCase()) !== -1;
+    return value.toLowerCase().includes(query.toLowerCase());
 });
 console.log(filterItems(friends, 'ka'));
 console.log(filterItems(friends, 'e'));
