@@ -5,9 +5,10 @@ class Person {
     constructor(name, age) {
         this.name = name;
         this.age = age;
-        this.describe = function () {
-            return `${this.name}, ${this.age} years old.`;
-        }
+
+    }
+    describe = function () {
+        return `${this.name}, ${this.age} years old.`;
     }
 }
 const ale = new Person("alejandra", 19);
@@ -21,11 +22,12 @@ class Cylinder {
         this.radius = radius;
         this.height = height;
         this.volume = Number.parseFloat((Math.PI * Math.pow(radius, 2) * height).toFixed(4));
-
     }
+
 }
 console.log(new Cylinder(12, 14));
-
+const cylinder = new Cylinder(12, 14);
+console.log(cylinder.volume);
 
 
 
@@ -36,18 +38,38 @@ console.log(new Cylinder(12, 14));
 
 // Q4.
 class TV {
-    constructor(brand, channel = 1, volume = 50) {
+    constructor(brand, channel, volume) {
         this.brand = "LG";
-        this.channel = channel;
-        this.volume = volume;
-        this.volumeMethod = function () {
-
-        }
-        this.channelMethod = function () {
-
-        }
-        this.resetMethod = function () {
-            
+        this.channel = 1;
+        this.volume = 50;
+    }
+    volumeUp = function () {
+        if (this.volume === 100) {
+            console.log("Max Volume")
+        } else {
+            this.volume += 1;
+            console.log("Volume Up", this.volume);
         }
     }
+    volumeDown = function () {
+        if (this.volume === 0) {
+            return "Min Volume";
+        } else {
+            this.volume -= 1;
+            console.log("Volume Down", this.volume);
+        }
+    }
+    channelMethod = function () {
+        return Math.ceil(Math.random() * 50);
+    }
+    resetMethod = function () {
+        return `Your TV will reset to channel ${this.channel} and to volume ${this.volume}`
+    }
 }
+const Panasonic = new TV;
+// console.log(new TV(Panasonic));
+// console.log(Panasonic.volumeMethod());
+console.log(Panasonic.channelMethod());
+console.log(Panasonic.resetMethod());
+console.log(Panasonic.volumeDown());
+console.log(Panasonic.volumeUp());
