@@ -5,7 +5,7 @@ class Dog {
     constructor(name) {
         this.name = name;
     }
-    bark = function () {
+    bark() {
         return `${this.name} says woof`;
     }
 }
@@ -44,34 +44,43 @@ console.log(getMonthName(12));
 
 // Q3.
 const reverseString = (string) => {
-  try {
-    Integer.parseInt(string); 
-    throw ReferenceError('Invalid Month Number!');
-  } else {
-    return string.split("").reverse().join("");
-  }
-
+    try {
+        if (typeof string === "number") {
+            throw new Error('ERROR! This is not a string!');
+        } else {
+            return string.split("").reverse().join("");
+        }
+    } catch (e) {
+        console.error(e);
+    }
 }
 
 console.log(reverseString("alejandra"));
-
-try {
-    return string.split("").reverse().join("");
-} else {
-    if (typeof string === 'number' && isFinite(string));
-        throw ReferenceError('Invalid Month Number!');
-    }
- catch (e) {
-    console.error(e);
-
-}
+console.log(reverseString(201));
 
 
 // Q4.
-function compareArrays(arr1, arr2) {
-    if (arr1 === arr2) {
-        return true
-    } else {
-        return false
+// function compareArrays(arr1, arr2) {
+//     if (arr1 === arr2) {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
+
+// Q5.
+function sum(array) {
+    // RangeError: Maximum call stack size exceeded
+    try {
+        if (array.length === 0) {
+            return 0;
+        }
+        let result = array.pop() + sum(array);
+        return result;
+    } catch (e) {
+        console.error(e);
     }
+
 }
+
+console.log(sum([1, 2, 3]));
