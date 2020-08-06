@@ -14,7 +14,7 @@ li {
 
 .header {
     height: 15rem;
-    background-image: url("images/yarn.jpg");
+    background-image: url("img/woolheader.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
